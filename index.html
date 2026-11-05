@@ -16,7 +16,8 @@
 <meta property="og:title" content="Arc Select — Sua próxima venda já está aqui">
 <meta property="og:description" content="Oportunidades selecionadas do litoral catarinense, com curadoria Arc.">
 <meta property="og:image" content="img/hero.jpg">
-<noscript><style>.rv{opacity:1!important}</style></noscript>
+<noscript><style>.rv{opacity:1!important}@media(max-width:640px){.cards{grid-template-columns:1fr}}
+</style></noscript>
 <style>
 :root{
   --navy:#0B1D33;          /* azul Arc: tinta principal */
@@ -92,31 +93,26 @@ header.solid .logo img{filter:none}
 .tabs button{background:none;border:0;cursor:pointer;font-size:.95rem;font-weight:500;padding:6px 0;color:var(--ink-2);border-bottom:1px solid transparent}
 .tabs button:hover{color:var(--navy)}
 .tabs button[aria-pressed=true]{color:var(--navy);font-weight:600;border-color:var(--gold);border-bottom-width:2px}
-.idx{display:grid;grid-template-columns:7fr 5fr;gap:var(--pad);align-items:start;margin-top:10px}
-.idx-list{list-style:none}
-.idx-list li{border-bottom:1px solid var(--rule)}
-.idx-list li.hide{display:none}
-.idx-list a{display:grid;grid-template-columns:1fr auto;gap:4px 24px;align-items:baseline;padding:30px 0 30px 0;position:relative;transition:padding .35s}
-.idx-list a::before{content:"";position:absolute;left:0;top:50%;width:0;height:2px;background:var(--gold);transition:width .35s}
-.idx-list .th{display:none}
-.idx-list .nm{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,3.4vw,3rem);line-height:1.05;letter-spacing:-.015em;transition:color .3s}
-.idx-list .pr{font-weight:600;font-size:1.05rem;white-space:nowrap;text-align:right}
-.idx-list .mt{grid-column:1/-1;font-size:.9rem;color:var(--ink-2)}
-.idx-list li.on a{padding-left:34px}
-.idx-list li.on a::before{width:22px}
-.idx-list li.on .nm{color:var(--gold)}
-.idx-view{position:sticky;top:112px}
-.idx-view .pic{overflow:hidden;aspect-ratio:4/5;background:var(--paper-2);margin-bottom:22px}
-.idx-view .pic img{width:100%;height:100%;object-fit:cover;animation:fi .6s ease}
-@keyframes fi{from{opacity:0}to{opacity:1}}
-.idx-view .state{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.idx-view .state span{font-size:.76rem;font-weight:500;padding:5px 11px;background:var(--navy);color:#fff}
-.idx-view .state span.alt{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy)}
-.idx-view dl{display:flex;gap:30px;flex-wrap:wrap;padding-block:16px;border-block:1px solid var(--rule)}
-.idx-view dt{font-size:.74rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
-.idx-view dd{font-weight:600;font-size:1.05rem}
-.idx-view .links{display:flex;gap:26px;align-items:center;margin-top:20px;flex-wrap:wrap}
-.idx-view .links .btn{padding:16px 26px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,36px);margin-top:36px}
+.card.hide{display:none}
+.card a{display:flex;flex-direction:column;height:100%;background:#fff;transition:box-shadow .4s,transform .4s}
+.card a:hover{transform:translateY(-6px);box-shadow:0 28px 50px -28px rgba(11,29,51,.4)}
+.card .pic{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--paper-2)}
+.card .pic img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+.card a:hover .pic img{transform:scale(1.05)}
+.card .badge{position:absolute;left:0;top:18px;background:var(--navy);color:#fff;font-size:.76rem;font-weight:600;padding:7px 14px}
+.card .badge.alt{background:#fff;color:var(--navy)}
+.card .body{display:flex;flex-direction:column;flex:1;padding:24px 24px 26px}
+.card .kind{font-size:.82rem;font-weight:500;color:var(--ink-2)}
+.card h3{font-weight:400;font-size:clamp(1.9rem,2.6vw,2.4rem);margin:6px 0 2px}
+.card .where{font-weight:500;color:var(--ink-2);font-size:.92rem;margin-bottom:18px}
+.card .spec{display:flex;gap:22px;flex-wrap:wrap;padding-block:14px;border-block:1px solid var(--rule);margin-bottom:18px}
+.card .spec span{font-size:.92rem;font-weight:500}
+.card .spec small{display:block;font-size:.7rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.card .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.card .foot small{display:block;font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.card .foot b{font-family:var(--serif);font-weight:400;font-size:1.7rem;letter-spacing:-.02em;white-space:nowrap}
+.card .foot i{font-style:normal;font-weight:600;font-size:.9rem;border-bottom:1px solid var(--gold);padding-bottom:2px;white-space:nowrap}
 .note{padding-top:30px;font-size:.8rem;color:var(--ink-2)}
 
 /* contato */
@@ -163,23 +159,14 @@ footer .priv{margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,
 
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1}}
 @media(max-width:980px){
-  header nav{position:fixed;inset:88px 0 0 0;background:var(--paper);color:var(--navy);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:0;padding:20px var(--pad);transform:translateY(-8px);opacity:0;visibility:hidden;transition:.35s}
+  header nav{position:fixed;top:88px;left:0;right:0;bottom:0;background:var(--paper);color:var(--navy);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:0;padding:20px var(--pad);transform:translateY(-8px);opacity:0;visibility:hidden;transition:.35s}
   header nav a{font-family:var(--serif);font-size:2rem;font-weight:300;padding:14px 0;width:100%;border-bottom:1px solid var(--rule);opacity:1}
   .menu-btn{display:block}
-  .menu-open{background:var(--paper);color:var(--navy)}
+  .menu-open,header.solid.menu-open{background:var(--paper)!important;color:var(--navy);backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
   .menu-open .logo img{filter:none}
   .menu-open nav{opacity:1;visibility:visible;transform:none}
   .contact .grid{grid-template-columns:1fr}
-  .idx{grid-template-columns:1fr}
-  .idx-view{display:none}
-  .idx-list a{grid-template-columns:84px 1fr;grid-template-areas:"th nm" "th mt" "th pr";gap:2px 18px;align-items:center;padding:20px 0}
-  .idx-list .th{display:block;grid-area:th;width:84px;height:84px;object-fit:cover}
-  .idx-list .nm{grid-area:nm;font-size:1.7rem}
-  .idx-list .mt{grid-area:mt;grid-column:auto}
-  .idx-list .pr{grid-area:pr;text-align:left;font-size:.95rem}
-  .idx-list li.on a{padding-left:0}
-  .idx-list li.on a::before{display:none}
-  .idx-list li.on .nm{color:inherit}
+  .cards{grid-template-columns:repeat(2,1fr)}
   .hero .in{flex-direction:column;align-items:flex-start}
   .scroll{display:none}
   body{padding-bottom:58px}
@@ -235,7 +222,7 @@ footer .priv{margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,
         <button data-f="pronto" aria-pressed="false">Pronto e condomínio</button>
       </div>
     </div>
-    <div class="idx"><ul class="idx-list" id="list"></ul><aside class="idx-view" id="view" aria-live="polite"></aside></div>
+    <div class="cards" id="cards"></div>
     <p class="note">Material para corretores credenciados. Preços e condições sujeitos a alteração. Imagens ilustrativas.</p>
   </div>
 </section>
@@ -309,28 +296,19 @@ const P=[
  {slug:'casa-louvier',f:'pronto',n:'Casa Louvier',loc:'América · Joinville / SC',state:'Casa · Condomínio fechado',units:'1 unidade',entrega:'',area:'300 m²',suites:'3 suítes',price:'R$ 3.490.000',pl:'A partir de',url:'https://arcincorporadora.com.br/select/arcselect_casalouvier'},
  {slug:'plaza-beach',f:'obras',n:'Plaza Beach',loc:'Barra Velha / SC',state:'Cobertura · Em obras',units:'1 unidade',entrega:'Dez/2029',area:'211,82 m²',suites:'4 suítes',price:'R$ 3.865.000',pl:'A partir de',url:'https://arcincorporadora.com.br/select/arcselect_plazabeach_cobertura2402'}
 ];
-const list=document.getElementById('list'),view=document.getElementById('view');
-const items=P.map((p,i)=>{
-  const li=document.createElement('li');li.dataset.f=p.f;
-  li.innerHTML=`<a href="${p.slug}.html"><img class="th" src="img/${p.slug}.jpg" alt="" loading="lazy"><span class="nm">${p.n}</span><span class="pr">${p.pl==='Condições'?p.price:p.price}</span><span class="mt">${p.state.replace(/ · /g,' · ')} · ${p.loc.split(' · ').pop()}</span></a>`;
-  list.appendChild(li);return li;
+const cards=document.getElementById('cards');
+const items=P.map(p=>{
+  const li=document.createElement('article');li.className='card';li.dataset.f=p.f;
+  const sp=(l,v)=>v?`<span><small>${l}</small>${v}</span>`:'';
+  li.innerHTML=`<a href="${p.slug}.html"><div class="pic"><span class="badge${/unidade/.test(p.units)&&p.units!=='1 unidade'?'':' alt'}">${p.units}</span><img src="img/${p.slug}.jpg" alt="${p.n}" loading="lazy"></div>
+  <div class="body"><span class="kind">${p.state}</span><h3>${p.n}</h3><p class="where">${p.loc}</p>
+  <div class="spec">${sp('Área',p.area)}${sp('Suítes',p.suites)}${sp('Entrega',p.entrega)}</div>
+  <div class="foot"><div><small>${p.pl}</small><b>${p.price}</b></div><i>Ver ficha</i></div></div></a>`;
+  cards.appendChild(li);return li;
 });
-function show(i){
-  const p=P[i];
-  items.forEach((li,k)=>li.classList.toggle('on',k===i));
-  const d=(t,v)=>v?`<div><dt>${t}</dt><dd>${v}</dd></div>`:'';
-  view.innerHTML=`<div class="pic"><img src="img/${p.slug}.jpg" alt="${p.n}"></div>
-  <p class="state">${p.state.split(' · ').map(t=>'<span>'+t+'</span>').join('')}<span class="alt">${p.units}</span></p>
-  <dl>${d('Área',p.area)}${d('Suítes',p.suites)}${d('Entrega',p.entrega)}</dl>
-  <div class="links"><a class="btn" href="${p.slug}.html">Ver ficha</a><a class="tl" target="_blank" rel="noopener" href="${wa('Olá! Sou corretor e quero o material completo do '+p.n+' (Arc Select).')}">Pedir material</a></div>`;
-}
-items.forEach((li,i)=>{const a=li.firstChild;a.addEventListener('mouseenter',()=>show(i));a.addEventListener('focus',()=>show(i))});
-show(0);
 document.querySelectorAll('.tabs button').forEach(c=>c.addEventListener('click',()=>{
   document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-pressed',x===c));
-  let first=-1;
-  items.forEach((li,i)=>{const hide=c.dataset.f!=='all'&&P[i].f!==c.dataset.f;li.classList.toggle('hide',hide);if(!hide&&first<0)first=i});
-  if(first>=0)show(first);
+  items.forEach((li,i)=>li.classList.toggle('hide',c.dataset.f!=='all'&&P[i].f!==c.dataset.f));
 }));
 
 // formulário (corretor)
