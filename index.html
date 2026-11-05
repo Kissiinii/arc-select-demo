@@ -46,12 +46,12 @@ h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-.015em;line-he
 
 /* botões e links */
 .btn{display:inline-block;background:var(--navy);color:#fff;border:0;cursor:pointer;font:600 .95rem var(--sans);padding:19px 34px;transition:background .3s}
-.btn:hover{background:#17375c}
+@media(hover:hover){.btn:hover{background:#17375c}}
 .btn.light{background:#fff;color:var(--navy)}
-.btn.light:hover{background:var(--paper-2)}
+@media(hover:hover){.btn.light:hover{background:var(--paper-2)}}
 .btn:disabled{opacity:.6;cursor:wait}
 .tl{display:inline-block;font-weight:600;font-size:.95rem;border-bottom:1px solid currentColor;padding-bottom:3px;transition:opacity .25s}
-.tl:hover{opacity:.6}
+@media(hover:hover){.tl:hover{opacity:.6}}
 
 /* header */
 header{position:fixed;inset:0 0 auto 0;z-index:50;color:#fff;transition:background .4s,color .4s}
@@ -59,7 +59,7 @@ header .bar{display:flex;align-items:center;justify-content:space-between;height
 header .logo img{height:54px;width:auto;filter:brightness(0) invert(1);transition:filter .4s}
 header nav{display:flex;gap:40px;align-items:center}
 header nav a{font-size:.9rem;font-weight:400;opacity:.92}
-header nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
+@media(hover:hover){header nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}}
 header.solid{background:rgba(245,243,238,.94);backdrop-filter:blur(10px);color:var(--navy);box-shadow:0 1px 0 var(--rule)}
 header.solid .logo img{filter:none}
 .menu-btn{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;position:relative}
@@ -90,15 +90,15 @@ header.solid .logo img{filter:none}
 .port-h h2{font-size:clamp(2.2rem,4.4vw,3.8rem)}
 .tabs{display:flex;gap:28px;flex-wrap:wrap}
 .tabs button{background:none;border:0;cursor:pointer;font-size:.95rem;font-weight:500;padding:6px 0;color:var(--ink-2);border-bottom:1px solid transparent}
-.tabs button:hover{color:var(--navy)}
+@media(hover:hover){.tabs button:hover{color:var(--navy)}}
 .tabs button[aria-pressed=true]{color:var(--navy);font-weight:600;border-color:var(--gold);border-bottom-width:2px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,36px);margin-top:36px}
 .card.hide{display:none}
 .card a{display:flex;flex-direction:column;height:100%;background:#fff;transition:box-shadow .4s,transform .4s}
-.card a:hover{transform:translateY(-6px);box-shadow:0 28px 50px -28px rgba(11,29,51,.4)}
+@media(hover:hover){.card a:hover{transform:translateY(-6px);box-shadow:0 28px 50px -28px rgba(11,29,51,.4)}}
 .card .pic{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--paper-2)}
 .card .pic img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
-.card a:hover .pic img{transform:scale(1.05)}
+@media(hover:hover){.card a:hover .pic img{transform:scale(1.05)}}
 .card .badge{position:absolute;left:0;top:18px;background:var(--navy);color:#fff;font-size:.76rem;font-weight:600;padding:7px 14px}
 .card .badge.alt{background:#fff;color:var(--navy)}
 .card .body{display:flex;flex-direction:column;flex:1;padding:24px 24px 26px}
@@ -126,14 +126,14 @@ header.solid .logo img{filter:none}
 .how span{font-size:.95rem;opacity:.75}
 .ways{margin-top:44px;display:grid;gap:8px;font-size:.95rem}
 .ways a{font-weight:500;opacity:.95;width:max-content;border-bottom:1px solid rgba(255,255,255,.35)}
-.ways a:hover{opacity:1}
+@media(hover:hover){.ways a:hover{opacity:1}}
 form{display:grid;gap:26px}
 .fld{display:block}
 .fld span{display:block;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
 input,select{width:100%;font:400 1rem var(--sans);padding:10px 0 12px;background:transparent;border:0;border-bottom:1px solid rgba(217,184,130,.45);color:var(--gold-l);border-radius:0;transition:border-color .25s}
 select option{color:var(--navy)}
 .contact form .btn{background:var(--gold);color:var(--navy)}
-.contact form .btn:hover{background:var(--gold-l)}
+@media(hover:hover){.contact form .btn:hover{background:var(--gold-l)}}
 input:focus,select:focus{outline:0;border-color:var(--gold-l)}
 input:-webkit-autofill{-webkit-text-fill-color:var(--gold-l);box-shadow:0 0 0 100px var(--navy) inset}
 input:focus-visible,select:focus-visible{outline:0}
@@ -147,7 +147,7 @@ input:focus-visible,select:focus-visible{outline:0}
 footer{background:var(--navy-2);color:rgba(255,255,255,.6);padding-block:48px;font-size:.82rem}
 footer .row2{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-end}
 footer img{height:50px;filter:brightness(0) invert(1);margin-bottom:14px}
-footer a:hover{color:#fff}
+@media(hover:hover){footer a:hover{color:#fff}}
 .demo{margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);max-width:760px;font-size:.8rem;line-height:1.55;color:rgba(255,255,255,.7)}
 .demo strong{color:#D9B882;font-weight:600}
 footer .priv{margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12);max-width:760px}
@@ -174,6 +174,8 @@ footer .priv{margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,
   .mbar a+a{border-left:1px solid rgba(255,255,255,.2)}
 }
 @media(max-width:700px){.cards{grid-template-columns:1fr}.tabs{gap:8px 22px}}
+
+a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 </style>
 </head>
 <body>

@@ -15,11 +15,11 @@ a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-.015em;line-height:1.04}
 .lbl{font-size:.8rem;font-weight:500;color:var(--navy);letter-spacing:.14em;text-transform:uppercase;padding-top:12px;border-top:2px solid var(--gold);width:max-content}
 .btn{display:inline-block;background:var(--navy);color:#fff;border:0;cursor:pointer;font:600 .95rem var(--sans);padding:19px 34px;transition:background .3s}
-.btn:hover{background:#17375c}
+@media(hover:hover){.btn:hover{background:#17375c}}
 .btn.gold{background:var(--gold);color:var(--navy)}
-.btn.gold:hover{background:var(--gold-l)}
+@media(hover:hover){.btn.gold:hover{background:var(--gold-l)}}
 .tl{display:inline-block;font-weight:600;font-size:.95rem;border-bottom:1px solid currentColor;padding-bottom:3px;transition:opacity .25s}
-.tl:hover{opacity:.6}
+@media(hover:hover){.tl:hover{opacity:.6}}
 
 /* header */
 header{position:fixed;inset:0 0 auto 0;z-index:50;color:#fff;transition:background .4s,color .4s}
@@ -27,7 +27,7 @@ header .bar{display:flex;align-items:center;justify-content:space-between;height
 header .logo img{height:54px;width:auto;filter:brightness(0) invert(1);transition:filter .4s}
 header nav{display:flex;gap:40px;align-items:center}
 header nav a{font-size:.9rem;opacity:.92}
-header nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
+@media(hover:hover){header nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}}
 header.solid{background:rgba(245,243,238,.94);backdrop-filter:blur(10px);color:var(--navy);box-shadow:0 1px 0 var(--rule)}
 header.solid .logo img{filter:none}
 .menu-btn{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;position:relative;color:inherit}
@@ -120,16 +120,16 @@ td.v{font-weight:600}
 .cta .acts{display:flex;gap:30px;justify-content:center;align-items:center;flex-wrap:wrap}
 .next{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule)}
 .next a{padding:32px var(--pad);display:block;transition:background .3s}
-.next a:hover{background:var(--paper-2)}
+@media(hover:hover){.next a:hover{background:var(--paper-2)}}
 .next a+a{border-left:1px solid var(--rule);text-align:right}
 .next small{display:block;font-size:.8rem;font-weight:500;color:var(--ink-2);margin-bottom:4px}
 .next b{font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,3.6vw,3rem);letter-spacing:-.015em}
-.next a:hover b{color:var(--gold)}
+@media(hover:hover){.next a:hover b{color:var(--gold)}}
 
 footer{background:var(--navy-2);color:rgba(255,255,255,.6);padding-block:44px;font-size:.82rem}
 footer .row2{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-end}
 footer img{height:50px;filter:brightness(0) invert(1);margin-bottom:14px}
-footer a:hover{color:#fff}
+@media(hover:hover){footer a:hover{color:#fff}}
 
 .demo{margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);max-width:760px;font-size:.8rem;line-height:1.55;color:rgba(255,255,255,.7)}
 .demo strong{color:#D9B882;font-weight:600}
@@ -157,3 +157,5 @@ footer a:hover{color:#fff}
   .mbar a{padding:18px 8px;text-align:center;color:#fff;font:500 .9rem var(--sans)}
   .mbar a+a{border-left:1px solid rgba(255,255,255,.2)}
 }
+
+a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
