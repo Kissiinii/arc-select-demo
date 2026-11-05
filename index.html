@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arc Select — Oportunidades selecionadas no litoral catarinense</title>
+<meta name="description" content="Arc Select reúne as oportunidades mais sólidas do litoral e região de Santa Catarina, com curadoria Arc. Seis empreendimentos, 35 unidades, a partir de R$ 404 mil.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500&family=Newsreader:opsz,wght@6..72,300;6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B1D33'/%3E%3Cpath d='M8 24 16 7l8 17' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0B1D33">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Arc Select — Sua próxima venda já está aqui">
+<meta property="og:description" content="Oportunidades selecionadas do litoral catarinense, com curadoria Arc.">
+<meta property="og:image" content="img/hero.jpg">
+<noscript><style>.rv{opacity:1!important}</style></noscript>
+<style>
+:root{
+  --navy:#0B1D33;          /* azul Arc: tinta principal */
+  --navy-2:#081526;
+  --paper:#F5F3EE;         /* papel quente */
+  --paper-2:#ECE8E0;
+  --gold:#B8935C;          /* dourado Arc, só em detalhes */
+  --gold-l:#D9B882;
+  --ink-2:rgba(11,29,51,.66);
+  --rule:rgba(11,29,51,.16);
+  --serif:'Newsreader',Georgia,serif;
+  --sans:'Hanken Grotesk',system-ui,sans-serif;
+  --pad:clamp(24px,5vw,72px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{font-family:var(--sans);font-weight:400;color:var(--navy);background:var(--paper);line-height:1.6;font-size:1rem;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.pad{padding-inline:var(--pad)}
+h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-.015em;line-height:1.04}
+.lbl{font-size:.8rem;font-weight:500;color:var(--navy);letter-spacing:.14em;text-transform:uppercase;padding-top:12px;border-top:2px solid var(--gold);width:max-content}
+
+/* botões e links */
+.btn{display:inline-block;background:var(--navy);color:#fff;border:0;cursor:pointer;font:600 .95rem var(--sans);padding:19px 34px;transition:background .3s}
+.btn:hover{background:#17375c}
+.btn.light{background:#fff;color:var(--navy)}
+.btn.light:hover{background:var(--paper-2)}
+.btn:disabled{opacity:.6;cursor:wait}
+.tl{display:inline-block;font-weight:600;font-size:.95rem;border-bottom:1px solid currentColor;padding-bottom:3px;transition:opacity .25s}
+.tl:hover{opacity:.6}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;color:#fff;transition:background .4s,color .4s}
+header .bar{display:flex;align-items:center;justify-content:space-between;height:88px}
+header .logo img{height:54px;width:auto;filter:brightness(0) invert(1);transition:filter .4s}
+header nav{display:flex;gap:40px;align-items:center}
+header nav a{font-size:.9rem;font-weight:400;opacity:.92}
+header nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
+header.solid{background:rgba(245,243,238,.94);backdrop-filter:blur(10px);color:var(--navy);box-shadow:0 1px 0 var(--rule)}
+header.solid .logo img{filter:none}
+.menu-btn{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;position:relative}
+.menu-btn span,.menu-btn span::before{content:"";position:absolute;left:8px;right:8px;height:1.5px;background:currentColor;transition:.3s}
+.menu-btn span{top:17px}.menu-btn span::before{left:0;right:0;top:9px}
+.menu-open .menu-btn span{transform:translateY(4.5px) rotate(45deg)}
+.menu-open .menu-btn span::before{top:0;transform:rotate(-90deg)}
+
+/* hero */
+.hero{position:relative;height:100svh;min-height:620px;color:#fff;display:flex;align-items:flex-end;overflow:hidden;background:var(--navy-2)}
+.hero img.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% center}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,21,38,.62) 0,rgba(8,21,38,.3) 38%,transparent 62%),linear-gradient(180deg,rgba(8,21,38,.45) 0,transparent 22%,transparent 45%,rgba(8,21,38,.75) 100%)}
+.hero .in{position:relative;z-index:2;width:100%;padding-bottom:clamp(40px,7vh,84px);display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.hero h1{font-size:clamp(2.8rem,6.4vw,6rem);max-width:12ch;margin-bottom:26px}
+.hero .sub{max-width:430px;font-size:1.05rem;opacity:.92;margin-bottom:32px}
+.hero .acts{display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+.hero .tl{color:#fff}
+.scroll{font-size:.8rem;opacity:.8;writing-mode:vertical-rl;letter-spacing:.06em}
+
+/* curadoria */
+.open{padding-block:clamp(110px,17vw,230px);text-align:center}
+.open p.big{font-family:var(--serif);font-weight:300;font-size:clamp(2.2rem,5.2vw,4.8rem);line-height:1.14;letter-spacing:-.02em;max-width:1000px;margin-inline:auto;text-wrap:balance}
+.open p.big em{font-style:normal;color:var(--gold)}
+
+/* portfólio */
+.port{padding-bottom:clamp(80px,12vw,160px)}
+.port-h{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;padding-block:0 28px;border-bottom:1px solid var(--rule)}
+.port-h h2{font-size:clamp(2.2rem,4.4vw,3.8rem)}
+.tabs{display:flex;gap:28px;flex-wrap:wrap}
+.tabs button{background:none;border:0;cursor:pointer;font-size:.95rem;font-weight:500;padding:6px 0;color:var(--ink-2);border-bottom:1px solid transparent}
+.tabs button:hover{color:var(--navy)}
+.tabs button[aria-pressed=true]{color:var(--navy);font-weight:600;border-color:var(--gold);border-bottom-width:2px}
+.idx{display:grid;grid-template-columns:7fr 5fr;gap:var(--pad);align-items:start;margin-top:10px}
+.idx-list{list-style:none}
+.idx-list li{border-bottom:1px solid var(--rule)}
+.idx-list li.hide{display:none}
+.idx-list a{display:grid;grid-template-columns:1fr auto;gap:4px 24px;align-items:baseline;padding:30px 0 30px 0;position:relative;transition:padding .35s}
+.idx-list a::before{content:"";position:absolute;left:0;top:50%;width:0;height:2px;background:var(--gold);transition:width .35s}
+.idx-list .th{display:none}
+.idx-list .nm{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,3.4vw,3rem);line-height:1.05;letter-spacing:-.015em;transition:color .3s}
+.idx-list .pr{font-weight:600;font-size:1.05rem;white-space:nowrap;text-align:right}
+.idx-list .mt{grid-column:1/-1;font-size:.9rem;color:var(--ink-2)}
+.idx-list li.on a{padding-left:34px}
+.idx-list li.on a::before{width:22px}
+.idx-list li.on .nm{color:var(--gold)}
+.idx-view{position:sticky;top:112px}
+.idx-view .pic{overflow:hidden;aspect-ratio:4/5;background:var(--paper-2);margin-bottom:22px}
+.idx-view .pic img{width:100%;height:100%;object-fit:cover;animation:fi .6s ease}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+.idx-view .state{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.idx-view .state span{font-size:.76rem;font-weight:500;padding:5px 11px;background:var(--navy);color:#fff}
+.idx-view .state span.alt{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy)}
+.idx-view dl{display:flex;gap:30px;flex-wrap:wrap;padding-block:16px;border-block:1px solid var(--rule)}
+.idx-view dt{font-size:.74rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.idx-view dd{font-weight:600;font-size:1.05rem}
+.idx-view .links{display:flex;gap:26px;align-items:center;margin-top:20px;flex-wrap:wrap}
+.idx-view .links .btn{padding:16px 26px}
+.note{padding-top:30px;font-size:.8rem;color:var(--ink-2)}
+
+/* contato */
+.contact{background:var(--navy);color:#fff;padding-block:clamp(90px,13vw,180px)}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(50px,9vw,150px);align-items:start}
+.contact h2{font-size:clamp(2.4rem,5vw,4.4rem);max-width:12ch;margin-bottom:34px}
+.contact h2 em{font-style:normal;color:var(--gold-l)}
+.contact .intro{max-width:420px;font-size:1.1rem;opacity:.9;margin-bottom:50px}
+.how{list-style:none;border-top:1px solid rgba(255,255,255,.2);max-width:460px}
+.how li{padding:20px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.how b{display:block;font-family:var(--sans);font-weight:600;font-size:1.05rem;margin-bottom:2px}
+.how span{font-size:.95rem;opacity:.75}
+.ways{margin-top:44px;display:grid;gap:8px;font-size:.95rem}
+.ways a{font-weight:500;opacity:.95;width:max-content;border-bottom:1px solid rgba(255,255,255,.35)}
+.ways a:hover{opacity:1}
+form{display:grid;gap:26px}
+.fld{display:block}
+.fld span{display:block;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+input,select{width:100%;font:400 1rem var(--sans);padding:10px 0 12px;background:transparent;border:0;border-bottom:1px solid rgba(217,184,130,.45);color:var(--gold-l);border-radius:0;transition:border-color .25s}
+select option{color:var(--navy)}
+.contact form .btn{background:var(--gold);color:var(--navy)}
+.contact form .btn:hover{background:var(--gold-l)}
+input:focus,select:focus{outline:0;border-color:var(--gold-l)}
+input:-webkit-autofill{-webkit-text-fill-color:var(--gold-l);box-shadow:0 0 0 100px var(--navy) inset}
+input:focus-visible,select:focus-visible{outline:0}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:.82rem;color:var(--gold-l);line-height:1.5}
+.consent input{width:auto;margin-top:3px;accent-color:var(--gold)}
+.consent a{text-decoration:underline}
+.msg{display:none;font-size:.95rem;padding-top:4px;color:var(--gold-l)}
+.msg.show{display:block}.msg.err{color:#ffb4b4}
+.msg a{text-decoration:underline}
+
+footer{background:var(--navy-2);color:rgba(255,255,255,.6);padding-block:48px;font-size:.82rem}
+footer .row2{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-end}
+footer img{height:50px;filter:brightness(0) invert(1);margin-bottom:14px}
+footer a:hover{color:#fff}
+.demo{margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);max-width:760px;font-size:.8rem;line-height:1.55;color:rgba(255,255,255,.7)}
+.demo strong{color:#D9B882;font-weight:600}
+footer .priv{margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12);max-width:760px}
+
+.mbar{display:none}
+.rv{opacity:0;transition:opacity 1.2s ease}
+.rv.in{opacity:1}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1}}
+@media(max-width:980px){
+  header nav{position:fixed;inset:88px 0 0 0;background:var(--paper);color:var(--navy);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:0;padding:20px var(--pad);transform:translateY(-8px);opacity:0;visibility:hidden;transition:.35s}
+  header nav a{font-family:var(--serif);font-size:2rem;font-weight:300;padding:14px 0;width:100%;border-bottom:1px solid var(--rule);opacity:1}
+  .menu-btn{display:block}
+  .menu-open{background:var(--paper);color:var(--navy)}
+  .menu-open .logo img{filter:none}
+  .menu-open nav{opacity:1;visibility:visible;transform:none}
+  .contact .grid{grid-template-columns:1fr}
+  .idx{grid-template-columns:1fr}
+  .idx-view{display:none}
+  .idx-list a{grid-template-columns:84px 1fr;grid-template-areas:"th nm" "th mt" "th pr";gap:2px 18px;align-items:center;padding:20px 0}
+  .idx-list .th{display:block;grid-area:th;width:84px;height:84px;object-fit:cover}
+  .idx-list .nm{grid-area:nm;font-size:1.7rem}
+  .idx-list .mt{grid-area:mt;grid-column:auto}
+  .idx-list .pr{grid-area:pr;text-align:left;font-size:.95rem}
+  .idx-list li.on a{padding-left:0}
+  .idx-list li.on a::before{display:none}
+  .idx-list li.on .nm{color:inherit}
+  .hero .in{flex-direction:column;align-items:flex-start}
+  .scroll{display:none}
+  body{padding-bottom:58px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;inset:auto 0 0 0;z-index:55;background:var(--navy)}
+  .mbar a{padding:18px 8px;text-align:center;color:#fff;font:500 .9rem var(--sans)}
+  .mbar a+a{border-left:1px solid rgba(255,255,255,.2)}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="pad bar">
+    <a href="#top" class="logo" aria-label="Arc Select"><img src="img/logo.png" alt="Arc Select"></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+    <nav id="nav">
+      <a href="#curadoria">Curadoria</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+      <a id="navWa" target="_blank" rel="noopener" href="https://wa.me/5547984562206">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <img class="ph" src="img/hero.jpg" alt="Torre residencial à beira-mar ao entardecer">
+  <div class="pad in">
+    <div>
+      <h1>Sua próxima venda já está aqui.</h1>
+      <p class="sub">As oportunidades mais sólidas do litoral e região, com curadoria Arc — prontas para você apresentar, negociar e fechar.</p>
+      <div class="acts">
+        <a href="#portfolio" class="btn light">Ver o portfólio</a>
+        <a href="#contato" class="tl">Receber material completo</a>
+      </div>
+    </div>
+    <span class="scroll" aria-hidden="true">Role para continuar</span>
+  </div>
+</section>
+
+<section class="open pad" id="curadoria">
+  <p class="big rv">Não indicamos qualquer imóvel.<br>Indicamos o que passaria pelo <em>nosso próprio critério.</em></p>
+</section>
+
+<section class="port" id="portfolio">
+  <div class="pad">
+    <div class="port-h">
+      <h2>Portfólio</h2>
+      <div class="tabs" role="group" aria-label="Filtrar portfólio">
+        <button data-f="all" aria-pressed="true">Todos</button>
+        <button data-f="obras" aria-pressed="false">Em obras</button>
+        <button data-f="planta" aria-pressed="false">Na planta</button>
+        <button data-f="pronto" aria-pressed="false">Pronto e condomínio</button>
+      </div>
+    </div>
+    <div class="idx"><ul class="idx-list" id="list"></ul><aside class="idx-view" id="view" aria-live="polite"></aside></div>
+    <p class="note">Material para corretores credenciados. Preços e condições sujeitos a alteração. Imagens ilustrativas.</p>
+  </div>
+</section>
+
+<section class="contact pad" id="contato">
+  <div class="grid">
+    <div>
+      <h2>É corretor? <em>Trabalhe estas opções.</em></h2>
+      <p class="intro">Fale com a Arc Select e receba o material completo.</p>
+      <ol class="how">
+        <li><b>Fale com a Arc Select</b><span>Conte quais perfis de cliente você atende.</span></li>
+        <li><b>Receba o material completo</b><span>Fichas, valores e condições de cada oportunidade.</span></li>
+        <li><b>Apresente, negocie e feche</b><span>A equipe da Arc ao seu lado em cada etapa.</span></li>
+      </ol>
+      <div class="ways">
+        <a target="_blank" rel="noopener" href="https://wa.me/5547984562206">WhatsApp (47) 98456-2206</a>
+        <a target="_blank" rel="noopener" href="https://www.instagram.com/arcselect.incorp/">Instagram @arcselect.incorp</a>
+      </div>
+    </div>
+    <form id="lead">
+      <label class="fld"><span>Nome completo</span><input name="nome" autocomplete="name" required></label>
+      <label class="fld"><span>WhatsApp com DDD</span><input name="telefone" type="tel" inputmode="tel" pattern="[0-9()\s+\-]{10,20}" autocomplete="tel" required></label>
+      <label class="fld"><span>E-mail (opcional)</span><input name="email" type="email" autocomplete="email"></label>
+      <label class="fld"><span>CRECI</span><input name="creci" required></label>
+      <label class="fld"><span>Imobiliária (ou autônomo)</span><input name="imobiliaria" autocomplete="organization"></label>
+      <label class="fld"><span>Quero conhecer</span>
+        <select name="interesse" required>
+          <option value="" disabled selected></option>
+          <option>Todo o portfólio Arc Select</option>
+          <option>Dualité — Joinville</option>
+          <option>Villagio Di Trapani — Barra Velha</option>
+          <option>Ilha de Malta — Piçarras</option>
+          <option>Conselheiro Arp — Joinville</option>
+          <option>Casa Louvier — Joinville</option>
+          <option>Plaza Beach — Barra Velha</option>
+        </select>
+      </label>
+      <label class="consent"><input type="checkbox" name="consent" required><span>Concordo em ser contatado pela Arc Select e com a <a href="#privacidade">política de privacidade</a>.</span></label>
+      <div><button class="btn light" type="submit">Enviar</button></div>
+      <p class="msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="pad">
+  <div class="row2">
+    <div><img src="img/logo.png" alt="Arc Select"><br>© 2026 Arc Select · by Arc Incorporadora</div>
+    <div>Material para corretores credenciados · Preços sujeitos a alteração<br><a href="https://arcincorporadora.com.br/">Voltar ao site da Arc</a></div>
+  </div>
+  <p class="demo"><strong>Versão de avaliação.</strong> Este site é uma demonstração. Todos os materiais exibidos (imagens, textos, marcas, valores e condições) são de propriedade de seus respectivos titulares, a Arc Incorporadora e seus parceiros, e foram anexados apenas para fins de demonstração, sem finalidade comercial.</p>
+  <p class="priv" id="privacidade"><b>Privacidade.</b> Os dados informados (nome, telefone, e-mail, CRECI e imobiliária) são usados apenas para contato da Arc Select sobre as oportunidades do portfólio. [PREENCHER: razão social · CNPJ · e-mail do encarregado de dados]</p>
+</footer>
+
+<div class="mbar"><a href="#portfolio">Portfólio</a><a target="_blank" rel="noopener" href="https://wa.me/5547984562206">WhatsApp</a></div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script>
+/* ===== CONFIGURAÇÃO ===== */
+const WHATSAPP = "5547984562206";   // WhatsApp da Arc Select (o mesmo do site oficial)
+const LEAD_ENDPOINT = "";           // opcional: URL de webhook/CRM que recebe o lead (POST JSON)
+/* ======================== */
+const wa = t => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t)}`;
+
+// Dados conforme a página oficial Arc Select
+const P=[
+ {slug:'dualite',f:'obras',n:'Dualité',loc:'Glória · Joinville / SC',state:'Residencial · Em obras',units:'25 unidades',entrega:'2028',area:'50–63 m²',suites:'1 suíte + 1',price:'R$ 404.900',pl:'A partir de',url:'https://arcincorporadora.com.br/select/arcselect_dualite_corretores'},
+ {slug:'villagio-di-trapani',f:'planta',n:'Villagio Di Trapani',loc:'Itajubá · Barra Velha / SC',state:'Residencial · Na planta',units:'Pré-lançamento',entrega:'Dez/2030',area:'44–85 m² privativos',suites:'',price:'Sob consulta',pl:'Condições',url:'https://arcincorporadora.com.br/select/arcselect_ditrapani'},
+ {slug:'ilha-de-malta',f:'pronto',n:'Ilha de Malta',loc:'Itacolomi · Piçarras / SC',state:'Apartamento · Pronto',units:'1 unidade',entrega:'Imediata',area:'75 m²',suites:'2 suítes',price:'R$ 780.000',pl:'A partir de',url:'https://arcincorporadora.com.br/select/arcselect_ilhademalta'},
+ {slug:'conselheiro-arp',f:'obras',n:'Conselheiro Arp',loc:'Bairro América · Joinville / SC',state:'Apartamento · Em obras',units:'1 unidade',entrega:'Abr/2027',area:'240 m²',suites:'4 suítes',price:'R$ 2.900.000',pl:'A partir de',url:'https://arcincorporadora.com.br/select/arcselect_conselheiroarp'},
+ {slug:'casa-louvier',f:'pronto',n:'Casa Louvier',loc:'América · Joinville / SC',state:'Casa · Condomínio fechado',units:'1 unidade',entrega:'',area:'300 m²',suites:'3 suítes',price:'R$ 3.490.000',pl:'A partir de',url:'https://arcincorporadora.com.br/select/arcselect_casalouvier'},
+ {slug:'plaza-beach',f:'obras',n:'Plaza Beach',loc:'Barra Velha / SC',state:'Cobertura · Em obras',units:'1 unidade',entrega:'Dez/2029',area:'211,82 m²',suites:'4 suítes',price:'R$ 3.865.000',pl:'A partir de',url:'https://arcincorporadora.com.br/select/arcselect_plazabeach_cobertura2402'}
+];
+const list=document.getElementById('list'),view=document.getElementById('view');
+const items=P.map((p,i)=>{
+  const li=document.createElement('li');li.dataset.f=p.f;
+  li.innerHTML=`<a href="${p.slug}.html"><img class="th" src="img/${p.slug}.jpg" alt="" loading="lazy"><span class="nm">${p.n}</span><span class="pr">${p.pl==='Condições'?p.price:p.price}</span><span class="mt">${p.state.replace(/ · /g,' · ')} · ${p.loc.split(' · ').pop()}</span></a>`;
+  list.appendChild(li);return li;
+});
+function show(i){
+  const p=P[i];
+  items.forEach((li,k)=>li.classList.toggle('on',k===i));
+  const d=(t,v)=>v?`<div><dt>${t}</dt><dd>${v}</dd></div>`:'';
+  view.innerHTML=`<div class="pic"><img src="img/${p.slug}.jpg" alt="${p.n}"></div>
+  <p class="state">${p.state.split(' · ').map(t=>'<span>'+t+'</span>').join('')}<span class="alt">${p.units}</span></p>
+  <dl>${d('Área',p.area)}${d('Suítes',p.suites)}${d('Entrega',p.entrega)}</dl>
+  <div class="links"><a class="btn" href="${p.slug}.html">Ver ficha</a><a class="tl" target="_blank" rel="noopener" href="${wa('Olá! Sou corretor e quero o material completo do '+p.n+' (Arc Select).')}">Pedir material</a></div>`;
+}
+items.forEach((li,i)=>{const a=li.firstChild;a.addEventListener('mouseenter',()=>show(i));a.addEventListener('focus',()=>show(i))});
+show(0);
+document.querySelectorAll('.tabs button').forEach(c=>c.addEventListener('click',()=>{
+  document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-pressed',x===c));
+  let first=-1;
+  items.forEach((li,i)=>{const hide=c.dataset.f!=='all'&&P[i].f!==c.dataset.f;li.classList.toggle('hide',hide);if(!hide&&first<0)first=i});
+  if(first>=0)show(first);
+}));
+
+// formulário (corretor)
+const track={},params=new URLSearchParams(location.search);
+['gclid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(k=>{if(params.get(k))sessionStorage.setItem(k,params.get(k));if(sessionStorage.getItem(k))track[k]=sessionStorage.getItem(k)});
+window.dataLayer=window.dataLayer||[];
+document.getElementById('lead').addEventListener('submit',async e=>{
+  e.preventDefault();const f=e.target,out=f.querySelector('.msg'),btn=f.querySelector('button[type=submit]');
+  const d=Object.fromEntries(new FormData(f));delete d.consent;btn.disabled=true;
+  try{
+    if(LEAD_ENDPOINT){const r=await fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,...track,pagina:location.href,data:new Date().toISOString()})});if(!r.ok)throw 0}
+    dataLayer.push({event:'generate_lead'});
+    const t=`Olá! Sou ${d.nome}, CRECI ${d.creci}${d.imobiliaria?' ('+d.imobiliaria+')':''}. Quero receber o material completo: ${d.interesse}. Contato: ${d.telefone}.`;
+    out.innerHTML='Recebemos seus dados. Para agilizar, <a href="'+wa(t)+'" target="_blank" rel="noopener">continue pelo WhatsApp</a>.';
+    out.className='msg show';f.reset();
+  }catch(_){out.textContent='Não foi possível enviar agora. Tente novamente ou chame no WhatsApp.';out.className='msg show err'}
+  finally{btn.disabled=false}
+});
+
+// scroll suave (Lenis)
+if(window.Lenis&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  const lenis=new Lenis({duration:1.2,easing:t=>Math.min(1,1.001-Math.pow(2,-10*t))});
+  const raf=t=>{lenis.raf(t);requestAnimationFrame(raf)};requestAnimationFrame(raf);
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+    const id=a.getAttribute('href');if(id.length<2)return;const el=document.querySelector(id);if(!el)return;
+    e.preventDefault();lenis.scrollTo(el,{offset:-88});
+  }));
+}else document.documentElement.style.scrollBehavior='smooth';
+
+// header e menu
+const hd=document.querySelector('header'),mb=document.getElementById('menuBtn');
+const sync=()=>hd.classList.toggle('solid',scrollY>window.innerHeight*.6||hd.classList.contains('menu-open'));
+mb.addEventListener('click',()=>{const o=hd.classList.toggle('menu-open');mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');sync()});
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>{hd.classList.remove('menu-open');mb.setAttribute('aria-expanded',false);sync()}));
+addEventListener('scroll',sync,{passive:true});sync();
+
+// revelação suave (só fotos e blocos de texto principais)
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.08});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+}else document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));
+</script>
+</body>
+</html>
